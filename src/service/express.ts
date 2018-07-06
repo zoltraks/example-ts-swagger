@@ -16,19 +16,24 @@ const container = new Container();
 // note that you *must* bind your controllers to Controller
 container.bind<interfaces.Controller>(TYPE.Controller)
   .to(InformationController).inSingletonScope()
-  .whenTargetNamed(InformationController.TARGET_NAME
-  );
+  .whenTargetNamed(InformationController.TARGET_NAME);
 
 // create server
 const server = new InversifyExpressServer(container);
 
 // tslint:disable-next-line:no-shadowed-variable
 server.setConfig((app: any) => {
-    app.use("/swagger/swagger", express.static("swagger"));
-    app.use("/swagger/swagger/assets",
-      express.static("node_modules/swagger-ui-dist")
+
+    app.use("/swagger", express.static("./static/swagger", {
+      index: [ "index.html" ],
+    }));
+
+    app.use("/swagger/assets",
+      express.static("./node_modules/swagger-ui-dist")
     );
+
     app.use(bodyParser.json());
+
     app.use(
       swagger.express({
         path: "/swagger/v1/swagger.json",
@@ -46,6 +51,7 @@ server.setConfig((app: any) => {
         }
       })
     );
+
   });
 
 // tslint:disable-next-line:no-shadowed-variable
@@ -66,5 +72,7 @@ server.setErrorConfig((app: any) => {
 const app = server.build();
 
 app.listen( configuration.port );
+
 console.info( "Server is listening on: " + "http://localhost:" + configuration.port );
-console.info( "Swagger URL: " + "http://localhost:" + configuration.port + "/swagger/v1/swagger.json");
+console.info( "Swagger definition: " + "http://localhost:" + configuration.port + "/swagger/v1/swagger.json");
+console.info( "Swagger UI: " + "http://localhost:" + configuration.port + "/swagger");

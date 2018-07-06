@@ -8,6 +8,7 @@
     "inversify": "^4.13.0",
     "inversify-express-utils": "^6.1.0",
     "swagger-express-ts": "^1.0.0",
+    "swagger-ui-dist": "^3.17.2",
     "ts-loader": "^4.4.2",
     "ts-node": "^7.0.0",
     "tslint": "^5.10.0",

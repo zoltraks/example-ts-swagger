@@ -31,7 +31,11 @@ export class InformationController implements interfaces.Controller {
         description: "Get all information objects",
         summary: "Get all information objects",
         responses: {
-            200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: "Information" }
+            200: {
+                description: "Success",
+                type: SwaggerDefinitionConstant.Response.Type.ARRAY,
+                model: "InformationModel"
+            }
         },
         security: {
             apiKeyHeader: [],
@@ -47,7 +51,11 @@ export class InformationController implements interfaces.Controller {
         description: "Get information object",
         summary: "Get information object",
         responses: {
-            200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: "Information" }
+            200: {
+                description: "Success",
+                type: SwaggerDefinitionConstant.Response.Type.ARRAY,
+                model: "InformationModel"
+            }
         },
         security: {
             apiKeyHeader: [],
@@ -63,7 +71,11 @@ export class InformationController implements interfaces.Controller {
         description: "Create new information object",
         summary: "Create new information object",
         parameters: {
-            body: { description: "Create new information object", required: true, model: "Information" }
+            body: {
+                description: "Create new information object",
+                required: true,
+                model: "InformationModel"
+            }
         },
         responses: {
             200: { description: "Success" },
