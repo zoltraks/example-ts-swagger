@@ -19,13 +19,13 @@ const data = require("../../data.json");
 
 @ApiPath({
     path: "/information",
-    name: "Information",
+    name: "InformationApi",
     security: { basicAuth: [] },
 })
 @controller("/information")
 // @injectable()
 export class InformationController implements interfaces.Controller {
-    public static TARGET_NAME: string = "Information";
+    public static TARGET_NAME: string = "Information1";
 
     @ApiOperationGet({
         description: "Get all information objects",
@@ -34,7 +34,7 @@ export class InformationController implements interfaces.Controller {
             200: {
                 description: "Success",
                 type: SwaggerDefinitionConstant.Response.Type.ARRAY,
-                model: "InformationModel"
+                model: "Information"
             }
         },
         security: {
@@ -54,7 +54,7 @@ export class InformationController implements interfaces.Controller {
             200: {
                 description: "Success",
                 type: SwaggerDefinitionConstant.Response.Type.ARRAY,
-                model: "InformationModel"
+                model: "Information"
             }
         },
         security: {
@@ -74,7 +74,7 @@ export class InformationController implements interfaces.Controller {
             body: {
                 description: "Create new information object",
                 required: true,
-                model: "InformationModel"
+                model: "Information"
             }
         },
         responses: {

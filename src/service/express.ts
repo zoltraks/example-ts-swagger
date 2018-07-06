@@ -1,10 +1,10 @@
-import { InformationModel } from '../component/information/information.model';
 import * as bodyParser from "body-parser";
 import * as express from "express";
 import "reflect-metadata";
 import { Container } from "inversify";
 import { interfaces, InversifyExpressServer, TYPE } from "inversify-express-utils";
 import { InformationController } from "../component/information/information.controller";
+import { InformationModel } from './../component/information/information.model';
 import * as swagger from "swagger-express-ts";
 import { SwaggerDefinitionConstant } from "swagger-express-ts";
 // tslint:disable-next-line:no-var-requires
@@ -45,6 +45,7 @@ server.setConfig((app: any) => {
           externalDocs: {
             url: "My URL..."
           },
+          // models: null,
           responses: {
             500: {}
           }

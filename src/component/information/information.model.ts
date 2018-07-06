@@ -1,9 +1,9 @@
 import { ApiModel, ApiModelProperty } from "swagger-express-ts";
 
-@ApiModel( {
+@ApiModel({
     description : "Information" ,
     name : "Information",
-} )
+})
 export class InformationModel {
 
     @ApiModelProperty( {
