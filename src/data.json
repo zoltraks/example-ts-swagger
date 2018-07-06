@@ -1,0 +1,26 @@
+[
+    {
+        "id": "0",
+        "name": "Start",
+        "description": "Information 0",
+        "text": "Null..."
+    },
+    {
+        "id": "1",
+        "name": "Begin",
+        "description": "Information 1",
+        "text": "Hello from the other side..."
+    },
+    {
+        "id": "2",
+        "name": "Finish",
+        "description": "Information 2",
+        "text": "All those moments will be lost in time..."
+    },
+    {
+        "id": "3",
+        "name": "Finish",
+        "description": "Information 3",
+        "text": "Like tears in rain..."
+    }
+]
