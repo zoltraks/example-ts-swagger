@@ -10,17 +10,17 @@ export class InformationModel {
         description : "Id of version" ,
         required : true,
     } )
-    public id: number;
+    public id: number = 0;
 
     @ApiModelProperty( {
         description : "" ,
         required : true,
     } )
-    public name: string;
+    public name: string = '';
 
     @ApiModelProperty( {
         description : "Description of version" ,
         required : true,
     } )
-    public description: string;
+    public description: string = '';
 }
