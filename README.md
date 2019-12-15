@@ -1,5 +1,5 @@
-README
-======
+Swagger UI in a TypeScript service
+==================================
 
 Install
 -------
@@ -24,9 +24,28 @@ npm run build
 
 That will use **webpack** to compile and bundle project.
 
-After start point to http://localhost:3000/swagger/v1/swagger.json and have fun with some other links lie:
+```
+npm start
+```
+
+This will run service.
+
+```
+> @ start C:\PROJECT\HUB\example-ts-swagger
+> node dist/server.js
+
+Server is listening on: http://localhost:3000
+Swagger definition: http://localhost:3000/swagger/v1/swagger.json
+Swagger UI: http://localhost:3000/swagger
+```
+
+Browse this address http://localhost:3000/swagger/ to see service description. Pure JSON may be taken from http://localhost:3000/swagger/v1/swagger.json then. 
+
+Have fun with some other links like:
 
  * http://localhost:3000/information
  * http://localhost:3000/information/1
 
-Have a nice day... Zoltar out...
+Have a nice day...
+
+Zoltraks (ZoltarX) out...
