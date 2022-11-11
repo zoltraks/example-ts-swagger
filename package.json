@@ -16,7 +16,7 @@
     "tslint": "^5.20.1",
     "typescript": "^2.9.2",
     "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
+    "webpack-cli": "^3.3.12",
     "webpack-node-externals": "^1.7.2"
   },
   "repository": {
