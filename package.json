@@ -11,12 +11,12 @@
     "reflect-metadata": "^0.1.13",
     "swagger-express-ts": "^1.0.1",
     "swagger-ui-dist": "^3.25.0",
-    "ts-loader": "^4.5.0",
+    "ts-loader": "^9.4.2",
     "ts-node": "^7.0.1",
     "tslint": "^5.20.1",
     "typescript": "^2.9.2",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "webpack-node-externals": "^1.7.2"
   },
   "repository": {
